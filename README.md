@@ -1,90 +1,95 @@
-# CurrículosPro ULTIMATE - Sistema de Currículos Online
+# CurrículosPro ULTIMATE - Online Resume System
 
-Um sistema profissional e moderno de gerenciamento de currículos online para **Rodrigo Marchi Gonella**, desenvolvido com PHP, MySQL e Bootstrap.
+A professional and modern online resume management system for **Rodrigo Marchi Gonella**, developed with PHP, MySQL, and Bootstrap.
 
-## 🚀 Características
+## 🚀 Features
 
 ### ✨ Frontend
-- **Home moderna** com listagem de currículos
-- **Visualização premium** de currículos com design responsivo
-- **Formulário de contato** integrado em cada currículo
-- **Contador de acessos** em tempo real
-- **Design Bootstrap 5** ultra moderno e profissional
 
-### 📊 Dashboard Administrativo
-- **Dashboard completo** com estatísticas gerais
-- **Gerenciamento de múltiplos currículos** por usuário
-- **Sistema de Inbox** para mensagens recebidas
-- **Analytics avançado** com gráficos de visualizações
-- **Abas/Tabs ultra completas** para cadastro de currículo:
-  - Informações Básicas
-  - Experiência Profissional
-  - Formação Acadêmica
-  - Habilidades
-  - Projetos
-  - Certificações
-  - Idiomas
+* **Modern homepage** with resume listing
+* **Premium resume view** with responsive design
+* **Integrated contact form** on each resume
+* **Real-time view counter**
+* **Ultra-modern and professional Bootstrap 5 design**
 
-### 💬 Sistema de Mensagens
-- Receba mensagens de contatos através do frontend
-- Gerenciamento de Inbox no painel administrativo
-- Marcar mensagens como lidas
-- Responder por email
+### 📊 Administrative Dashboard
+
+* **Complete dashboard** with general statistics
+* **Management of multiple resumes** per user
+* **Inbox system** for received messages
+* **Advanced analytics** with view charts
+* **Ultra-complete tabs** for resume creation:
+
+  * Basic Information
+  * Professional Experience
+  * Academic Education
+  * Skills
+  * Projects
+  * Certifications
+  * Languages
+
+### 💬 Messaging System
+
+* Receive contact messages through the frontend
+* Inbox management in the admin panel
+* Mark messages as read
+* Reply via email
 
 ### 📈 Analytics
-- Contador de acessos por currículo
-- Visualizações por data (últimos 7 dias)
-- Gráficos interativos com Chart.js
-- Taxa de engajamento (mensagens/visualizações)
 
-## 📋 Requisitos
+* View counter per resume
+* Views by date (last 7 days)
+* Interactive charts with Chart.js
+* Engagement rate (messages/views)
 
-- PHP 7.4+
-- MySQL 5.7+
-- Apache com mod_rewrite ativado
-- Composer (opcional)
+## 📋 Requirements
 
-## 🔧 Instalação
+* PHP 7.4+
+* MySQL 5.7+
+* Apache with mod_rewrite enabled
+* Composer (optional)
 
-### 1. Importar o Banco de Dados
+## 🔧 Installation
+
+### 1. Import the Database
 
 ```bash
-mysql -u seu_usuario -p seu_banco < database.sql
+mysql -u your_user -p your_database < database.sql
 ```
 
-### 2. Configurar Credenciais
+### 2. Configure Credentials
 
-Edite o arquivo `includes/config.php` com suas credenciais:
+Edit the file `includes/config.php` with your credentials:
 
 ```php
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'seu_banco');
-define('DB_USER', 'seu_usuario');
-define('DB_PASS', 'sua_senha');
+define('DB_NAME', 'your_database');
+define('DB_USER', 'your_user');
+define('DB_PASS', 'your_password');
 ```
 
-### 3. Criar Diretório de Uploads
+### 3. Create Uploads Directory
 
 ```bash
 mkdir -p assets/uploads
 chmod 755 assets/uploads
 ```
 
-### 4. Acessar o Sistema
+### 4. Access the System
 
-- **Frontend**: `http://seu-dominio.com`
-- **Admin**: `http://seu-dominio.com/admin/login.php`
+* **Frontend**: `http://your-domain.com`
+* **Admin**: `http://your-domain.com/admin/login.php`
 
-## 🔐 Credenciais Padrão
+## 🔐 Default Credentials
 
 ```
-Usuário: admin
-Senha: admin123
+Username: admin
+Password: admin123
 ```
 
-⚠️ **IMPORTANTE**: Altere a senha padrão após o primeiro acesso!
+⚠️ **IMPORTANT**: Change the default password after the first login!
 
-## 📁 Estrutura de Diretórios
+## 📁 Directory Structure
 
 ```
 curriculo_online/
@@ -113,11 +118,11 @@ curriculo_online/
 └── README.md
 ```
 
-## 🎨 Customização
+## 🎨 Customization
 
-### Cores e Tema
+### Colors and Theme
 
-Edite as variáveis CSS nos arquivos de visualização:
+Edit the CSS variables in the view files:
 
 ```css
 :root {
@@ -126,94 +131,95 @@ Edite as variáveis CSS nos arquivos de visualização:
 }
 ```
 
-### Informações Pessoais
+### Personal Information
 
-Edite o arquivo `views/home.php` para atualizar:
-- Nome
-- Profissão
-- Descrição
-- Contatos
-- Links de redes sociais
+Edit the file `views/home.php` to update:
 
-## 🔄 Fluxo de Uso
+* Name
+* Profession
+* Description
+* Contacts
+* Social media links
 
-### Para o Usuário (Rodrigo)
+## 🔄 Usage Flow
 
-1. **Login** no painel administrativo
-2. **Criar novo currículo** com título e informações básicas
-3. **Preencher abas** com experiência, educação, habilidades, etc.
-4. **Ativar currículo** para aparecer na home
-5. **Monitorar** visualizações e mensagens no dashboard
+### For the User (Rodrigo)
 
-### Para Recrutadores
+1. **Log in** to the admin panel
+2. **Create a new resume** with title and basic information
+3. **Fill in the tabs** with experience, education, skills, etc.
+4. **Activate the resume** to appear on the homepage
+5. **Monitor** views and messages on the dashboard
 
-1. **Acessar home** e ver currículos disponíveis
-2. **Visualizar currículo** completo com design profissional
-3. **Enviar mensagem** através do formulário de contato
-4. **Acompanhar** com link de portfólio e redes sociais
+### For Recruiters
 
-## 📊 Banco de Dados
+1. **Access the homepage** and view available resumes
+2. **View the full resume** with professional design
+3. **Send a message** through the contact form
+4. **Follow** portfolio and social media links
 
-### Tabelas Principais
+## 📊 Database
 
-- **users**: Usuários do sistema
-- **resumes**: Currículos
-- **experiences**: Experiências profissionais
-- **education**: Formação acadêmica
-- **skills**: Habilidades
-- **projects**: Projetos
-- **certifications**: Certificações
-- **languages**: Idiomas
-- **messages**: Mensagens recebidas
-- **views**: Registro de acessos
+### Main Tables
+
+* **users**: System users
+* **resumes**: Resumes
+* **experiences**: Professional experiences
+* **education**: Academic education
+* **skills**: Skills
+* **projects**: Projects
+* **certifications**: Certifications
+* **languages**: Languages
+* **messages**: Received messages
+* **views**: View records
 
 ## 🚀 Deploy
 
-### Requisitos de Servidor
+### Server Requirements
 
-- Suporte a PHP 7.4+
-- MySQL 5.7+
-- Espaço em disco: 100MB mínimo
-- Banda: Conforme necessário
+* PHP 7.4+ support
+* MySQL 5.7+
+* Disk space: minimum 100MB
+* Bandwidth: as needed
 
-### Passos
+### Steps
 
-1. Upload dos arquivos via FTP/SFTP
-2. Importar `database.sql` no MySQL
-3. Configurar `includes/config.php`
-4. Definir permissões de pasta: `chmod 755 assets/uploads`
-5. Testar acesso ao admin e frontend
+1. Upload files via FTP/SFTP
+2. Import `database.sql` into MySQL
+3. Configure `includes/config.php`
+4. Set folder permissions: `chmod 755 assets/uploads`
+5. Test admin and frontend access
 
 ## 🐛 Troubleshooting
 
-### Erro de Conexão com Banco
+### Database Connection Error
 
-Verifique as credenciais em `includes/config.php`
+Check the credentials in `includes/config.php`
 
-### Uploads não funcionam
+### Uploads Not Working
 
 ```bash
 chmod 755 assets/uploads
 chmod 755 assets
 ```
 
-### Página em branco
+### Blank Page
 
-Ative exibição de erros em `includes/config.php`:
+Enable error display in `includes/config.php`:
 
 ```php
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 ```
 
-## 📞 Suporte
+## 📞 Support
 
-Para dúvidas ou problemas, entre em contato através do formulário de mensagens no site.
+For questions or issues, contact us through the site’s message form.
 
-## 📄 Licença
+## 📄 License
 
-Este projeto é de propriedade de Rodrigo Marchi Gonella.
+This project is the property of Rodrigo Marchi Gonella.
 
 ---
 
-**Desenvolvido com ❤️ usando PHP, MySQL e Bootstrap**
+**Developed by Rodrigo Marchi Gonella using PHP, MySQL, and Bootstrap**
