@@ -1,0 +1,525 @@
+/* ============================================
+   PALETA DE CORES GLOBAL - VERDE E ROXA
+   ============================================ */
+
+:root {
+    --primary-green: #10b981;      /* Verde principal */
+    --primary-purple: #8b5cf6;     /* Roxo principal */
+    --light-green: #d1fae5;        /* Verde claro */
+    --light-purple: #ede9fe;       /* Roxo claro */
+    --dark-green: #047857;         /* Verde escuro */
+    --dark-purple: #6d28d9;        /* Roxo escuro */
+    --accent-green: #34d399;       /* Verde acento */
+    --accent-purple: #a78bfa;      /* Roxo acento */
+    --text-dark: #1f2937;
+    --text-light: #f3f4f6;
+    --border-color: #e5e7eb;
+}
+
+/* ============================================
+   ESTILOS GLOBAIS
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f3f4f6 0%, #fafbfc 100%);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* ============================================
+   BOTÕES
+   ============================================ */
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--accent-green) 100%) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--dark-green) 0%, var(--primary-green) 100%) !important;
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, var(--primary-purple) 0%, var(--accent-purple) 100%) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, var(--dark-purple) 0%, var(--primary-purple) 100%) !important;
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+    color: var(--primary-green) !important;
+    border: 2px solid var(--primary-green) !important;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background: var(--primary-green) !important;
+    color: white !important;
+}
+
+.btn-outline-secondary {
+    color: var(--primary-purple) !important;
+    border: 2px solid var(--primary-purple) !important;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+    background: var(--primary-purple) !important;
+    color: white !important;
+}
+
+/* ============================================
+   CARDS
+   ============================================ */
+
+.card {
+    border: none !important;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+}
+
+.card-header {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-purple) 100%) !important;
+    color: white !important;
+    border: none !important;
+    font-weight: 600;
+    padding: 20px;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+/* ============================================
+   FORMULÁRIOS
+   ============================================ */
+
+.form-control,
+.form-select {
+    border: 2px solid var(--border-color) !important;
+    border-radius: 8px;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    font-size: 15px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-green) !important;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1) !important;
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* ============================================
+   ALERTAS
+   ============================================ */
+
+.alert-success {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(52, 211, 153, 0.1) 100%) !important;
+    border: 2px solid var(--primary-green) !important;
+    color: var(--dark-green) !important;
+    border-radius: 8px;
+}
+
+.alert-danger {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(248, 113, 113, 0.1) 100%) !important;
+    border: 2px solid #ef4444 !important;
+    color: #7f1d1d !important;
+    border-radius: 8px;
+}
+
+.alert-info {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(167, 139, 250, 0.1) 100%) !important;
+    border: 2px solid var(--primary-purple) !important;
+    color: var(--dark-purple) !important;
+    border-radius: 8px;
+}
+
+.alert-warning {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(251, 191, 36, 0.1) 100%) !important;
+    border: 2px solid #f59e0b !important;
+    color: #92400e !important;
+    border-radius: 8px;
+}
+
+/* ============================================
+   BADGES
+   ============================================ */
+
+.badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.badge.bg-success {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--accent-green) 100%) !important;
+}
+
+.badge.bg-info {
+    background: linear-gradient(135deg, var(--primary-purple) 0%, var(--accent-purple) 100%) !important;
+}
+
+/* ============================================
+   NAVBAR / HEADER
+   ============================================ */
+
+.navbar {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-purple) 100%) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 24px;
+    color: white !important;
+    letter-spacing: -0.5px;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin: 0 10px;
+}
+
+.nav-link:hover {
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   SIDEBAR (ADMIN)
+   ============================================ */
+
+.sidebar {
+    background: linear-gradient(180deg, var(--primary-green) 0%, var(--dark-green) 100%);
+    min-height: 100vh;
+    padding: 20px 0;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-item {
+    padding: 15px 20px;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+    font-weight: 500;
+}
+
+.sidebar-item:hover,
+.sidebar-item.active {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-left-color: var(--accent-green);
+    padding-left: 25px;
+}
+
+/* ============================================
+   TABELAS
+   ============================================ */
+
+.table {
+    border-collapse: collapse;
+}
+
+.table thead th {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-purple) 100%);
+    color: white;
+    font-weight: 600;
+    border: none;
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.table tbody tr:hover {
+    background: var(--light-green);
+}
+
+.table tbody td {
+    padding: 15px;
+    vertical-align: middle;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-purple) 100%);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -5%;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    opacity: 0.95;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 30px;
+}
+
+/* ============================================
+   TABS
+   ============================================ */
+
+.nav-tabs {
+    border-bottom: 2px solid var(--border-color) !important;
+}
+
+.nav-tabs .nav-link {
+    color: var(--text-dark);
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover {
+    color: var(--primary-green);
+    border-bottom-color: var(--primary-green);
+}
+
+.nav-tabs .nav-link.active {
+    background: transparent !important;
+    color: white !important;
+    border-bottom-color: var(--primary-green) !important;
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-purple) 100%) !important;
+    border-radius: 8px 8px 0 0;
+}
+
+/* ============================================
+   PROGRESSBAR
+   ============================================ */
+
+.progress {
+    background: var(--light-green);
+    border-radius: 10px;
+    height: 8px;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, var(--primary-green) 0%, var(--accent-green) 100%);
+    border-radius: 10px;
+}
+
+/* ============================================
+   LINKS
+   ============================================ */
+
+a {
+    color: var(--primary-green);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+a:hover {
+    color: var(--primary-purple);
+    text-decoration: underline;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+footer {
+    background: linear-gradient(135deg, var(--text-dark) 0%, #111827 100%);
+    color: white;
+    padding: 40px 0 20px;
+    margin-top: 60px;
+    border-top: 3px solid var(--primary-green);
+}
+
+footer a {
+    color: var(--accent-green);
+}
+
+footer a:hover {
+    color: var(--accent-green);
+}
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+}
+
+/* ============================================
+   ANIMAÇÕES
+   ============================================ */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.5s ease-out;
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* ============================================
+   UTILITÁRIOS
+   ============================================ */
+
+.text-primary-green {
+    color: var(--primary-green) !important;
+}
+
+.text-primary-purple {
+    color: var(--primary-purple) !important;
+}
+
+.bg-primary-green {
+    background: var(--primary-green) !important;
+}
+
+.bg-primary-purple {
+    background: var(--primary-purple) !important;
+}
+
+.border-primary-green {
+    border: 2px solid var(--primary-green) !important;
+}
+
+.border-primary-purple {
+    border: 2px solid var(--primary-purple) !important;
+}
+
+.shadow-green {
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2) !important;
+}
+
+.shadow-purple {
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.2) !important;
+}

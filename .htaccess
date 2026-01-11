@@ -1,0 +1,23 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Permitir acesso direto a arquivos e pastas reais
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+    
+    # Permitir acesso à pasta admin sem reescrita
+    RewriteCond %{REQUEST_URI} ^/admin/ [OR]
+    RewriteCond %{REQUEST_URI} ^/assets/ [OR]
+    RewriteCond %{REQUEST_URI} ^/includes/
+    RewriteRule ^ - [L]
+    
+    # Reescrever URLs amigáveis para index.php
+    RewriteRule ^(.*)$ index.php?slug=$1 [QSA,L]
+</IfModule>
+
+# Proteger arquivos sensíveis
+<FilesMatch "\.sql$|\.env$|config\.php$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
